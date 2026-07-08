@@ -120,7 +120,6 @@ def return_fasta2():
 @app.route('/status/delete_protein')
 def delete_protein():
     f = request.args.get('file','')
-    # Prevent accidental deletion of all proteins or parent directories
     if not f or f.strip() in ['', '.', '/', '\\'] or '/' in f or '\\' in f:
         return jsonify({'message': 'No file specified or invalid file name'}), 400
     try:
@@ -215,7 +214,6 @@ def list_protein_folders():
     files = os.listdir(directory)
     return jsonify({'files': files})
 
-# ---------- Serve PKL Heatmap Graph as PNG image ----------
 @app.route('/viewport/pkl_graph')
 def pkl_graph():
     file_name = request.args.get('file_name', '')
@@ -235,7 +233,6 @@ def pkl_graph():
     img_io.seek(0)
     return send_file(img_io, mimetype='image/png')
 
-# ---------- Serve PKL Line Graph as PNG image ----------
 @app.route('/viewport/pkl_line')
 def pkl_line():
     file_name = request.args.get('file_name', '')
@@ -256,8 +253,6 @@ def pkl_line():
     plt.close()
     img_io.seek(0)
     return send_file(img_io, mimetype='image/png')
-
-# --- running alphafold and status page
 
 @app.route('/run_alphafold')
 def run_alphafold():
