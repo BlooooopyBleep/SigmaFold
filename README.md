@@ -1,4 +1,4 @@
-# 🧬 SigmaFold
+# SigmaFold
 
 **From Sequence to Structure: A Web-Based Gateway to AlphaFold**
 
@@ -6,7 +6,7 @@ SigmaFold is a browser-based application designed to improve access to AI-driven
 
 ---
 
-## 🚀 The Vision: An AI-Driven Future
+## An AI-Driven Future
 
 Traditionally, running complex AI models like AlphaFold requires significant technical expertise, expensive hardware, and command-line proficiency. SigmaFold changes the status quo by acting as a bridge between the raw power of supercomputers and the aspiring scientists who need them. 
 
@@ -17,7 +17,7 @@ By simplifying access to OSC resources, SigmaFold:
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 * **Browser-Based Dashboard:** A clean, easy-to-navigate GUI accessible from anywhere.
 * **Direct OSC Integration:** Seamlessly communicates with Ohio Supercomputer Center servers to handle the heavy lifting.
@@ -26,7 +26,7 @@ By simplifying access to OSC resources, SigmaFold:
 
 ---
 
-## ⚙️ The Ins and Outs: How It Works
+## How It Works
 
 SigmaFold abstracts away the complexity of HPC job scheduling and container management. Here is the typical workflow:
 
@@ -37,7 +37,7 @@ SigmaFold abstracts away the complexity of HPC job scheduling and container mana
 
 ---
 
-## 📜 Project History 
+## Recognition
 
 SigmaFold was originally developed as a STEM Institute project aimed at demonstrating how quickly and effectively software can bridge the gap between users and high-performance computing. 
 
