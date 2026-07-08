@@ -50,7 +50,6 @@ class slurm_runner:
         if self.alphafold_path:
             command += " --alphafold_path=" + self.alphafold_path
 
-        # return command
         print("running alphafold with command:", command, flush=True)
         subprocess.run(command, shell=True)
     
@@ -80,12 +79,3 @@ class slurm_runner:
         pkl_file = pkl_file.replace(".pdb", ".pkl")
 
         subprocess.run(f"cp {pkl_file} {dir}/{self.protein_id}.pkl", shell=True)
-
-
-
-
-# s = slurm_runner(protein_id="P10145", sigmaFold_dir="/fs/scratch/PZS1152/alphafold/robin_alphafold/sigmaFold", db_preset="reduced_dbs", fasta_path="/fs/scratch/PZS1152/alphafold/robin_alphafold/sigmaFold/web_dir/P10145.fasta", model_preset="monomer")
-
-# s.run()
-# s.movePKL("/fs/scratch/PZS1152/alphafold/robin_alphafold/sigmaFold/web_pkl")
-        
