@@ -15,7 +15,6 @@
 
 set -euo pipefail
 
-# Default values
 protein_id=""
 sigmaFold_dir=""
 output_dir="/fs/scratch/PZS1152/alphafold/robin_alphafold/msas/rob2"
@@ -26,12 +25,11 @@ singularity_image="/apps/alphafold/2.3.2/alphafold.sif"
 database_dir="/fs/scratch/PZS1152/alphafold/alphafold"
 alphafold_path="/fs/scratch/PZS1152/alphafold/robin_alphafold/scripts/alphafold/robins_devious_run_alphafold_patched.py"
 
-# Parse flags
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --*=*)
-            key="${1%%=*}"   # Extract part before '='
-            value="${1#*=}"  # Extract part after '='
+            key="${1%%=*}"   
+            value="${1#*=}"  
             ;;
         *)
             echo "Invalid argument format: $1. Use --key=value."
